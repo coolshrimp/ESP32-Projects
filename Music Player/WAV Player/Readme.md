@@ -1,7 +1,9 @@
 # Arduino Music Player
 
 ## Introduction
-This Arduino-based music player project is designed to play WAV files from an SD card. It features an OLED display for song selection and uses I2S for audio output. The project is built using Arduino libraries and custom functions for ease of use and expandability.
+This Arduino-based music player project is designed to play WAV files from an SD card. 
+It features an OLED display for song selection and uses I2S for audio output. 
+The project is built using Arduino libraries and custom functions for ease of use and expandability.
 
 ## Hardware Requirements
 - Arduino-compatible microcontroller (e.g., ESP32)
@@ -12,9 +14,9 @@ This Arduino-based music player project is designed to play WAV files from an SD
 - Appropriate connecting wires
 
 ## Setup
-1. **Wiring**: Connect the hardware components according to the pin assignments defined in `Main.ino`.
-2. **Libraries**: Ensure all required libraries (`Adafruit_SSD1306`, `Adafruit_GFX`, etc.) are installed in your Arduino IDE.
-3. **SD Card**: Format the SD card to FAT32 and load it with `.wav` files.
+- **Wiring**: Connect the hardware components according to the pin assignments defined in `Main.ino`.
+- **Libraries**: Ensure all required libraries (`Adafruit_SSD1306`, `Adafruit_GFX`, etc.) are installed in your Arduino IDE.
+- **SD Card**: Format the SD card to FAT32 and load it with `.wav` files.
 
 ## Usage
 - Power on the device.
@@ -24,30 +26,30 @@ This Arduino-based music player project is designed to play WAV files from an SD
 - The UP and DOWN buttons can be used to change tracks during playback.
 - The OK button can pause and resume playback.
 
-## Additional Notes
-- The project includes functions for logging to both the Serial Monitor and the OLED display.
-- A debounce mechanism is implemented for button presses.
-- The player supports basic navigation and playback controls.
-- The code is designed for easy modification and expansion.
+## Audio File Conversion
+To ensure your audio files are compatible with the player, use the provided `conversion.bat` script. This script converts audio files to the required 48 kHz, unsigned 8-bit WAV format.
 
-## Additional Notes
-- The project includes functions for logging to both the Serial Monitor and the OLED display.
-- A debounce mechanism is implemented for button presses.
-- The player supports basic navigation and playback controls.
-- The code is designed for easy modification and expansion.
+### Using the Conversion Script
+- **Preparation**: Place the `conversion.bat` file in the folder with your `.mp3` or `.wav` files.
+- **Drag-and-Drop**:Drag and drop audio files onto the `conversion.bat` file icon to convert them.
+- **Output**: Converted files will be saved in a new folder named `Converted` within the same directory.
+
+
 
 ## Troubleshooting
-
+-----------------------------------------------------------
 ### Audio Clipping
 If you experience audio clipping or distortion:
-- Check the output from the ESP32. 
-You might need a resistor voltage divider to lower the input before it goes into your amplifier. 
-This can prevent clipping by reducing the signal level to a range suitable for your amplifier.
+- Check the output from the ESP32. You might need a resistor voltage divider to lower the input before it goes into your amplifier. This can prevent clipping by reducing the signal level to a range suitable for your amplifier.
 
 ### Audio Output
 - No external DAC module is needed to get audio output. The ESP32's built-in DAC is used for audio playback.
 
 ### File Format and Bitrate
-- Ensure that your audio files are in the correct format and bitrate. 
-The player is designed to work with unsigned 8-bit WAV files at 48 kHz. 
-Using files with different bitrates or formats may result in playback issues.
+- Ensure that your audio files are in the correct format and bitrate. The player is designed to work with unsigned 8-bit WAV files at 48 kHz. Using files with different bitrates or formats may result in playback issues.
+
+## Additional Notes
+- The project includes functions for logging to both the Serial Monitor and the OLED display.
+- A debounce mechanism is implemented for button presses.
+- The player supports basic navigation and playback controls.
+- The code is designed for easy modification and expansion.
