@@ -30,13 +30,24 @@ This Arduino-based music player project is designed to play WAV files from an SD
 - The player supports basic navigation and playback controls.
 - The code is designed for easy modification and expansion.
 
-## Contributing
-Contributions, issues, and feature requests are welcome. Feel free to check [issues page](your-github-repo-link) if you want to contribute.
+## Additional Notes
+- The project includes functions for logging to both the Serial Monitor and the OLED display.
+- A debounce mechanism is implemented for button presses.
+- The player supports basic navigation and playback controls.
+- The code is designed for easy modification and expansion.
 
-## License
-Distributed under the MIT License. See `LICENSE` for more information.
+## Troubleshooting
 
-## Contact
-Your Name - your@email.com
+### Audio Clipping
+If you experience audio clipping or distortion:
+- Check the output from the ESP32. 
+You might need a resistor voltage divider to lower the input before it goes into your amplifier. 
+This can prevent clipping by reducing the signal level to a range suitable for your amplifier.
 
-Project Link: [https://github.com/your_username/your_project](your-github-repo-link)
+### Audio Output
+- No external DAC module is needed to get audio output. The ESP32's built-in DAC is used for audio playback.
+
+### File Format and Bitrate
+- Ensure that your audio files are in the correct format and bitrate. 
+The player is designed to work with unsigned 8-bit WAV files at 48 kHz. 
+Using files with different bitrates or formats may result in playback issues.
