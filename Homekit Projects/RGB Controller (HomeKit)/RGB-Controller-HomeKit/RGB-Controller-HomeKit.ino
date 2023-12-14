@@ -99,7 +99,7 @@ void setup() {
     new Characteristic::Identify();
     new Characteristic::Name("5V RGB LED Strip");
     new Characteristic::Manufacturer("Coolshrimp Modz");
-    new Characteristic::Model("15-LED's");
+    new Characteristic::Model("3-LED's");
     new RgbLED(redPin, greenPin, bluePin, true);
 }
 
