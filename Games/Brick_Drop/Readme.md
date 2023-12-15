@@ -1,6 +1,6 @@
 # Brick Drop Game
 
-![Brick Drop Game Menu](main-screenshot.jpeg)
+![Brick Drop Game Menu](menu-screenshot.jpeg)
 ![Brick Drop Game](screenshot.jpeg)
 
 
