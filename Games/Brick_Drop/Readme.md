@@ -1,8 +1,7 @@
 # Brick Drop Game
 
-![Brick Drop Game Menu](menu-screenshot.jpeg)
-![Brick Drop Game](screenshot.jpeg)
-
+<img src="menu-screenshot.jpeg" alt="Brick Drop Game Menu" width="150"/>
+<img src="screenshot.jpeg" alt="Brick Drop Game" width="150"/>
 
 Brick Drop is a classic arcade-style game implemented on an Arduino using an OLED display and buttons. The objective of the game is to stack falling blocks to create full rows and clear them for points. But be careful, as the blocks fall faster and faster as you progress!
 
