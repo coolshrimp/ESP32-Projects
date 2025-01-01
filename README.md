@@ -38,6 +38,11 @@ Based in Canada, I'm dedicated to exploring the technology and sharing my knowle
 Feel free to fork, star, or contribute to this repository. Your insights, bug reports, and feature suggestions are always welcome. 
 Let's collaborate to make ESP32 technology more accessible and innovative.
 
+## Donate
+
+If you’d like to support the development of files like these, consider a donation:  
+[**Support Me**](https://links.coolshrimpmodz.com)
+
 ---
 
 Embark on your ESP32 exploration with [CoolShrimp Modz](https://www.CoolshrimpModz.com) and join a journey of technological creativity and innovation!
